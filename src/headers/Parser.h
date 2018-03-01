@@ -16,11 +16,20 @@ using namespace std;
 class Parser {
 
 	private:
+		int next;
 		string path;
+		auto data;
 
 	public:
+		Parser(string f);
 		Parser();
 		~Parser();
+
+		void setPath(string f);
+		void processData(char type, string f = "");
+		auto getNextLine(); 
+		auto getData();
+		
 
 }
 
