@@ -16,7 +16,7 @@ class MLP {
 		NN nn;
 		int epochs;
 		
-		int uniformInt(int lower, int upper); // Random Uniform Generator
+		int uniformInt(int lower, int upper = nullptr); // Random Uniform Generator
 
 	public:
 		MLP();
