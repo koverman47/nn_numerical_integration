@@ -18,7 +18,7 @@ class Parser {
 	private:
 		int next;
 		string path;
-		auto data;
+		vector<vector<double> > data;
 
 	public:
 		Parser(string f);
@@ -26,9 +26,9 @@ class Parser {
 		~Parser();
 
 		void setPath(string f);
-		void processData(char type, string f = "");
-		auto getNextLine(); 
-		auto getData();
+		void processData(string f = "");
+		vector<double> getNextLine(); 
+		vector<vector<double> > getData();
 		
 
 }

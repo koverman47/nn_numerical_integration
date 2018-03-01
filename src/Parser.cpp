@@ -23,33 +23,36 @@ void Parser::setPath(string f) {
 }
 
 
-void Parser::processData(char type = 'd', string f = "") {
+// Assume data as doubles
+void Parser::processData(string f = "") {
 	if(f != "") {
 		this->path = f;
 	}
 
-	switch(type) {
-		case 'c': // Char
-			break;
-		case 'f': // Float
-			break;
-		case 'd': // Double
-			break;
-		case 'i': // Int
-			break;
-		case 'b': // Bool
-			break;
-		case 's': // String
-			break;
+	ifstream file(this->path); // open file stream
+	while(file.good()) {
+		char c[500]; // temporary character storage
+		
+		vector<double> input; // temporary vector
+		file.getline(c, 256); // get line - store in c
+		string str(c); // convert character array to string
+		istringstream ss(str); // give string to stream
+		string token; // token between commas
+		while(getline(ss, token, ',')) {
+			input.push_back(stod(token)); // cast token as double
+		}
+		this->data.push_back(input); // add vector to data matrix
+		vector<double>().swap(input); // clear vector
 	}
+	file.close();
 }
 
 
-auto getNextLine() {
+vector<double> getNextLine() {
 	return this->data[counter++]
 }
 
 
-auto getData() {
+vector<vector<double> > getData() {
 	return this->data;
 }
