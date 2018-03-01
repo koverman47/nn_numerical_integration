@@ -1,4 +1,5 @@
 #include "headers/MLP.h"
+#include "headers/NN.h"
 
 
 MLP::MLP() {}
