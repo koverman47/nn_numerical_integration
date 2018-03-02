@@ -14,18 +14,8 @@ using namespace std;
 int main() {
 	string path = "dataset.txt";
 
-	//int data = 3;
-	//string data = "something";
-	//double data = 1.9;
-	//bool data = true;
-	//float data = -1.0;
-	char data = 'a';
 
-
-	//switch()
-	
-	cout << typeid(data).name() << endl;
-	
+	mlp = MLP();
 
 	return 0;
 }
