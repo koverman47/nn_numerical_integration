@@ -2,7 +2,7 @@
 
 
 echo "Start Compiling"
-g++ $1 -o  a.out
+g++ -std=c++11 *.cpp -o  a.out
 echo "End Compiling"
 
 echo "Start Execution"
