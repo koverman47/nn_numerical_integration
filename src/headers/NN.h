@@ -22,7 +22,7 @@ class NN {
 		void initNetwork(); // Include parameters
 		void printNetwork();
 
-}
+};
 
 
 

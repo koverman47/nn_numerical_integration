@@ -31,7 +31,7 @@ class Parser {
 		vector<vector<double> > getData();
 		
 
-}
+};
 
 
 #endif

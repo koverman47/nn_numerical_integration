@@ -23,11 +23,6 @@ class MLP {
 		~MLP();
 
 
-}
-
-
-
-
-
+};
 
 #endif
